@@ -1,0 +1,33 @@
+include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    int i,S,N ;
+    scanf("%d",&i);
+    
+    for(S=0;S<i;S++){
+        scanf(" N=%d",&N);
+        long long a[N*N];
+        for(int r=0;r<N*N;r++)
+            scanf(" %lld",&a[r]);
+            
+            int key=1;
+            int last=N*N-1;
+            
+        
+        for(int k=0;k<N*N;k++){
+            if(k>last||key==0)
+                break;
+            if(a[k]<0||a[k]!=a[last-k])
+                key=0;
+            printf("Test #%d: %s.\n",S,key?"Symmetric":"Non Symmetric");
+        }
+            //printf("Test #%d: %s.\n",S,key?"Symmetric":"Non Symmetric");
+            //S++;
+    
+    //for(int r=0;r<N;r++)
+    //return 0;
+        S++;
+  }
+    return 0;
+}
